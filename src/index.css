@@ -1,0 +1,80 @@
+.for-body-container {
+    overflow-x: auto; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if content overflows vertically */
+    white-space: nowrap; /* Prevent line breaks for horizontal scrolling */
+    display: flex; /* Ensure the children are displayed in a row */
+    gap: 20px; /* Adjust the gap between items as needed */
+    max-width: 100%; /* Ensure it doesn't overflow its parent */
+    margin-bottom: 20px; /* Optional: Add margin to the bottom */
+    padding-bottom: 20px; /* Optional: Add padding to the bottom */
+    scroll-behavior: smooth;
+  }
+
+  
+  .for-body-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+  }
+
+/* For Store Locator */
+.carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+}
+.carousel-slide:hover .carousel-button {
+  opacity: 1; /* Show on hover */
+  visibility: visible; /* Show on hover */
+}
+.carousel-button-left {
+  position: absolute;
+  left: 0;
+  top: 45%;
+}
+.carousel-button-right {
+  position: absolute;
+  right: 0;
+  top: 45%;
+}
+
+.carousel-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  transition: transform 0.5s ease; /* Add a transition for smooth sliding */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
